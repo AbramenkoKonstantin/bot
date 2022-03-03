@@ -114,7 +114,7 @@ def friweekday(friweekday):
 
 
 #Понедельник следующий
-@bot.message_handler(commands=['ПнСлед', 'ПНСлед', 'пнСлед'])
+@bot.message_handler(commands=['ПнСлед', 'ПНСлед', 'пнСлед', 'пнслед'])
 def nextmonweekday(nextmonweekday):
   tid = nextmonweekday.chat.id
 
@@ -129,7 +129,7 @@ def nextmonweekday(nextmonweekday):
 
 
 #Вторник следующий
-@bot.message_handler(commands=['ВтСлед' ,'ВТСлед' ,'втСлед'])
+@bot.message_handler(commands=['ВтСлед' ,'ВТСлед' ,'втСлед', 'втслед'])
 def nexttuesweekday(nexttuesweekday):
   tid = nexttuesweekday.chat.id
 
@@ -144,7 +144,7 @@ def nexttuesweekday(nexttuesweekday):
 
   
 #Среда следующая
-@bot.message_handler(commands=['СрСлед' ,'СРСлед' ,'срСлед'])
+@bot.message_handler(commands=['СрСлед' ,'СРСлед' ,'срСлед', 'срслед'])
 def nextwednesweekday(nextwednesweekday):
   tid = nextwednesweekday.chat.id
 
@@ -159,7 +159,7 @@ def nextwednesweekday(nextwednesweekday):
 
 
 #Четверг следующий
-@bot.message_handler(commands=['ЧтСлед' ,'ЧТСлед' ,'чтСлед'])
+@bot.message_handler(commands=['ЧтСлед' ,'ЧТСлед' ,'чтСлед', 'чтслед'])
 def nextthursweekday(nextthursweekday):
   tid = nextthursweekday.chat.id
 
@@ -174,7 +174,7 @@ def nextthursweekday(nextthursweekday):
 
 
 #Пятница следующая
-@bot.message_handler(commands=['ПтСлед' ,'ПТСлед' ,'птСлед'])
+@bot.message_handler(commands=['ПтСлед' ,'ПТСлед' ,'птСлед', 'птслед'])
 def nextfriweekday(nextfriweekday):
   tid = nextfriweekday.chat.id
   
@@ -191,7 +191,7 @@ def nextfriweekday(nextfriweekday):
 def textMessage(textMessage):
   if textMessage.text == "Расписание звонков":
     tid = textMessage.chat.id
-    bot.send_message(tid, "1)8:00-9:35\n2)9:45-11:20\n3)11:45-13:20\n4)13:30-15:05\n5)15:30-17:05")
+    bot.send_message(tid, "1)8:00-9:35\n2)9:45-11:20\n3)11:45-13:20\n4)13:30-15:05\n5)15:30-17:05\n6)17:15-18:50")
 
   if textMessage.text == "Календарь":
     tid = textMessage.chat.id

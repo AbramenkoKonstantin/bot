@@ -14,6 +14,7 @@ keyboard_weekdayOfTheWeek.add(button_tommorow)
 button_allWeek = telebot.types.KeyboardButton(text='На всю неделю')
 keyboard_weekdayOfTheWeek.add(button_allWeek)
 keyboard_weekdayOfTheWeek.row("/Вернуться")
+
 week = (datetime.datetime.utcnow().isocalendar()[1])%2
 weekday = datetime.datetime.today().weekday()
 
@@ -178,11 +179,11 @@ def nextthursweekday(nextthursweekday):
 def nextfriweekday(nextfriweekday):
   tid = nextfriweekday.chat.id
   
-  if (week == 0):
+  if (week == 1):
     bot.send_message(tid,"Четная неделя")
     bot.send_message(tid, "1) Комп. физика(лаб) - 13:30-15:05(Кравченко Н.Г.)\nКабинет - 1314\n2) Англ(Лаб) - 15:30-17:05(Гринвальд О.Н.)\nКабинет - 2229\n3) АПРиИИС(Л) - 17:15-18:50(Степанов И.Ю.)\nКабинет - 2130а")
 
-  if (week == 1):
+  if (week == 0):
     bot.send_message(tid,"Нечетная неделя")
     bot.send_message(tid, "1) Физра - 11:45-13:20(Мартыненко)\nПантера\n2) Фин. мат.(л) - 13:30-15:05(Крутиков В.Н.)\nКабинет - 2226\n3) Англ(Лаб) - 15:30-17:05(Гринвальд О.Н.)\nКабинет - 2229\n4) АПРиИИС(Л) - 17:15-18:50(Степанов И.Ю.)\nКабинет - 2130а")
 
